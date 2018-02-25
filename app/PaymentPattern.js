@@ -8,10 +8,13 @@ PaymentPattern = {
 		return F.float(amount);
 	},
 	pay_min: function(account) {
-		return F.float(account.min_payment);
+		return Math.max(
+			F.float(account.min_payment_amount),
+			F.float(account.balance) * F.float(account.min_payment_rate)
+		);
 	},
-	pay_percent: function(account, percent) {
-		return F.float(account.balance) * F.float(percent);
+	pay_rate: function(account, rate) {
+		return F.float(account.balance) * F.float(rate);
 	}
 	
 };
