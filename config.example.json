@@ -1,0 +1,12 @@
+{
+	"db" : {
+		"user" : "incentcard",
+		"pass" : "incentcard_pass",
+		"host" : "127.0.0.1",
+		"port" : 5432
+	},
+	"debug" : true,
+	"host"  : "0.0.0.0",
+	"port"  : 3333,
+	"proxy" : true
+}
